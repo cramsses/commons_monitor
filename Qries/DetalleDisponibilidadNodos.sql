@@ -1,6 +1,6 @@
 --Oracle
 SELECT 
-	nds.NOMNODO,
+	nds.NOMNODO AS NOMBRE,
     nds.DISPONIBILIDAD_REQ,    
 	((SUM(case when op.IDESTATUS = 200 then 1 else 0 end)*100) / count(1) ) as DISPONIBILIDAD_REAL    
 FROM mont_operacion op 
@@ -10,7 +10,7 @@ group by nds.NOMNODO,nds.DISPONIBILIDAD_REQ;
 
 --MYSQL
 SELECT 
-	nds.NOMNODO,
+	nds.NOMNODO AS NOMBRE,
     nds.DISPONIBILIDAD_REQ,    
 	((SUM(case when op.IDESTATUS = 200 then 1 else 0 end)*100) / count(1) ) as DISPONIBILIDAD_REAL
     
