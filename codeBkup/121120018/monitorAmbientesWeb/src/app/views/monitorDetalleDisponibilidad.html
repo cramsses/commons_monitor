@@ -1,0 +1,131 @@
+<html>
+
+	<head>
+		<title>{{titulo}}</title>
+	</head>
+
+	<body>
+		<div class="container">
+			
+			<div class="ContenedorPrincipal">
+				<div class="row">
+
+					
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding  ">
+						<div id="contenedor1">
+							<div class="align-middle">
+								<div class="table-responsive">
+									<h2>Disponibilidad de Nodos</h2>
+									<table class="table" id="table1">
+										<thead>
+										    <tr>
+								                <th >Nodo</th>
+								                <th >DipReal</th>
+								                <th >DispReq</th>
+										    </tr>
+										</thead>
+										<tbody>
+								            <tr *ngFor="let obj of listaDetalleDisponibilidadNodos">
+								                <td>{{obj.nombre}}</td>
+								                <td>{{obj.disponibilidadReal}}%</td>
+								                <td>{{obj.disponibilidadRequerida}}%</td>
+								            </tr>
+										</tbody>
+										
+
+									</table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding ">
+						<div id="contenedor2">
+							<div class="align-middle">
+								<div class="table-responsive">
+									<h2>Disponibilidad de Ambientes</h2>
+									<table class="table" id="table2">
+										<thead>
+										    <tr>
+								                <th >Ambiente</th>
+								                <th >DipReal</th>
+								                <th >DispReq</th>
+										    </tr>
+										</thead>
+										<tbody>
+								            <tr *ngFor="let obj of listaDetalleDisponibilidadAmbientes">
+								                <td>{{obj.nombre}}</td>
+								                <td>{{obj.disponibilidadReal}}%</td>
+								                <td>{{obj.disponibilidadRequerida}}%</td>
+								            </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding ">
+						<div id="contenedor3">
+							<div class="align-middle">
+								<div class="table-responsive">
+									<h2>Disponibilidad de Base Datos</h2>
+									<table class="table" id="table3">
+										<thead>
+										    <tr>
+								                <th >Base Datos</th>
+								                <th >DipReal</th>
+								                <th >DispReq</th>
+										    </tr>
+										</thead>
+										<tbody>
+								            <tr *ngFor="let obj of listaDetalleDisponibilidadBaseDatos">
+								                <td>{{obj.nombre}}</td>
+								                <td>{{obj.disponibilidadReal}}%</td>
+								                <td>{{obj.disponibilidadRequerida}}%</td>
+								            </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding ">
+						<div id="contenedor4">
+							<div class="align-middle">
+								<div class="table-responsive">
+									<h2>Disponibilidad de Aplicación</h2>
+									<table class="table" id="table4">
+										<thead>
+										    <tr>
+								                <th >Aplicación</th>
+								                <th >DipReal</th>
+								                <th >DispReq</th>
+										    </tr>
+										</thead>
+										<tbody>
+								            <tr *ngFor="let obj of listaDetalleDisponibilidadApps">
+								                <td>{{obj.nombre}}</td>
+								                <td>{{obj.disponibilidadReal}}%</td>
+								                <td>{{obj.disponibilidadRequerida}}%</td>
+								            </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

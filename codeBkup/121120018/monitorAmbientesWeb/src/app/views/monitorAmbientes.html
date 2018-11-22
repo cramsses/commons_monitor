@@ -1,0 +1,96 @@
+<html>
+<head>
+</head>
+<body>
+<div class="container">
+   
+	<div class="ContenedorPrincipal bg-dark">
+
+		<nav class="navbar top topBarSabadell nopadding">
+		  <a class="navbar-brand" href="#">
+		    <img src="assets/images/logoBanco.PNG" height="34" class="d-inline-block align-top" alt="">
+		  </a>
+		  <a class="navbar-brand" href="#">
+		  	<h4 class="horaActualizada">
+		  		&Uacute;ltima actualización: {{horaUltimaAct}} hrs.
+		  	</h4> 
+		  </a>
+		</nav>
+
+
+
+	  <div class="row">
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding bg-dark">
+	    	<div id="contenedor1">
+	    		<div class="tablero">
+		            <div class="grafica">
+			          	<h3>Tiempos de respuesta por ambiente</h3>
+					  	<google-chart [data]="datosTablaTiempos"></google-chart>
+			        </div>
+			    </div>
+			</div>
+	    </div>
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding bg-dark">
+	    	<div id="contenedor2">
+		    	<div class="tablero">
+		            <div class="grafica">
+			          	<h3>Caidas registradas durante el d&iacute;a</h3>
+					  	<google-chart [data]="datosTablaCaidas"></google-chart>
+			        </div>
+			    </div>
+		    </div>
+	    </div>
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding bg-dark">
+	    	<div id="contenedor3">
+		    	<div class="tablero">
+			        <div class="grafica">
+			          	<h3>Disponibilidad de servidores</h3>
+			          	<div class="row">
+					        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 d-flex justify-content-center" *ngFor="let objeto of datosDisponibilidad">
+							  	<google-chart [data]="objeto">
+							  	</google-chart>
+					        </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 nopadding bg-dark ">
+	    	<div id="contenedor4">
+	    		<div class="align-middle">
+			    	<div class="table-responsive">
+						<table class="table" id="table">
+						  <thead>
+						    <tr>
+				                <th *ngFor="let objeto of listaTitulos">{{objeto}}</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+				            <tr *ngFor="let objeto of listaDatos">
+				                <td>{{objeto.nombreAmbiente}}</td>
+				                <td>{{objeto.nodo1}}</td>
+				                <td>{{objeto.nodo2}}</td>
+				                <td>{{objeto.bantotal}}</td>
+				                <td>{{objeto.bantotalNodo1}}</td>
+				                <td>{{objeto.bantotalNodo2}}</td>
+				                <td>{{objeto.sofom}}</td>
+				                <td>{{objeto.sofomNodo1}}</td>
+				                <td>{{objeto.sofomNodo2}}</td>
+				            </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+	    </div>
+	  </div>
+
+	  <nav class="barraInferior fixed-bottom  nopadding py-0">
+		  <a class="animacion-banner" >
+		    Pertenecemos al Grupo Banco Sabadell que nos respalda con 137 años de experiencia
+		  </a>
+		</nav>
+	</div>
+</div>
+</body>
+</html>
