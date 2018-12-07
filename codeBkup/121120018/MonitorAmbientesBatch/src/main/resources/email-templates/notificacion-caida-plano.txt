@@ -1,7 +1,0 @@
-Caida registrada en {{today}}
-Se ha registrado la caida de uno o más servidores. A continuación se listan:
-
-{{servers}}
-
-Gracias,
-Área de Monitoreo
